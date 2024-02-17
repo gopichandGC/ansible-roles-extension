@@ -27,7 +27,7 @@
   when: component == "catalogue" and products_count.stdout == "0"
 
 - name: Load user data
-  ansible.builtin.shell: "mongo --host mongodb.techwithgopi.online < /app/schema/{{component}}.js"
+  ansible.builtin.shell: "mongo --host  < /app/schema/{{component}}.js"
   when: component == "user" and users_count.stdout == "0"
 
 
