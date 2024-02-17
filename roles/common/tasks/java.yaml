@@ -8,8 +8,8 @@
   args:
     chdir: /app
 
-  - name: renaming jar file
-    ansible.builtin.command:  "mv target/{{component}}-{{shipping_version}}.jar {{component}}.jar"
-    args:
-      chdir: /app
+- name: renaming jar file
+  ansible.builtin.command:  "mv target/{{component}}-{{shipping_version}}.jar {{component}}.jar"
+  args:
+    chdir: /app
 
